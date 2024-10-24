@@ -1,0 +1,31 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  backend:
+    image: deeppurpleacr.azurecr.io/deeppurple-backend:latest
+    container_name: deeppurple-backend
+    restart: unless-stopped
+    environment:
+      - FLASK_ENV=production
+      # Add other environment variables here
+    ports:
+      - "5000:5000"
+    networks:
+      - deeppurple-network
+
+  frontend:
+    image: deeppurpleacr.azurecr.io/deeppurple-frontend:latest
+    container_name: deeppurple-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - deeppurple-network
+
+networks:
+  deeppurple-network:
+    driver: bridge

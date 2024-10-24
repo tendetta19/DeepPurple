@@ -1,0 +1,35 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.input-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.upload-component, .textinput-component {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  width: 45%;
+}
+
+.results-section {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+Flask
+Flask-Cors
+python-dotenv
+azure-ai-textanalytics
+PyPDF2
+openai
+requests
+beautifulsoup4
+python-docx
+openpyxl
